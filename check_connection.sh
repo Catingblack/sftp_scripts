@@ -40,7 +40,7 @@ if ! command -v sshpass &> /dev/null; then
 fi
 
 # Базовая команда SFTP
-TEST_CMD="sftp -oPort=$PORT -oStrictHostKeyChecking=no -oConnectTimeout=10 -oStrictHostKeyChecking=no -oPasswordAuthentication=yes"
+TEST_CMD="sftp -oPort=$PORT -oStrictHostKeyChecking=no -oConnectTimeout=10 -oStrictHostKeyChecking=no -oPasswordAuthentication=yes -oIdentitiesOnly=yes"
 
 echo "Проверка SFTP подключения к $HOST:$PORT пользователь $USER..." >&2
 
