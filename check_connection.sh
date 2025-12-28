@@ -45,7 +45,7 @@ if ! command -v sshpass &> /dev/null; then
 fi
 
 # Базовая команда SFTP - исправляем дублирование
-TEST_CMD="sftp -vvv -oPort=$PORT -oStrictHostKeyChecking=no -oConnectTimeout=10 -oPasswordAuthentication=yes -oIdentitiesOnly=yes"
+TEST_CMD="sftp -v -oPort=$PORT -oStrictHostKeyChecking=no -oConnectTimeout=10 -oPasswordAuthentication=yes -oIdentitiesOnly=yes"
 
 echo "Проверка SFTP подключения к $HOST:$PORT пользователь $USER..." >&2
 
